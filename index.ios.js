@@ -4,8 +4,4 @@
  * @flow
  */
 
-import DemoSupermarketRN from './main';
-import { AppRegistry } from 'react-native';
-
-
-AppRegistry.registerComponent('DemoSupermarketRN', () => DemoSupermarketRN);
+import './main';

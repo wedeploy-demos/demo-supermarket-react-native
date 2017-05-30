@@ -10,8 +10,11 @@ import {
 import Colors from '../helpers/colors'
 
 export default class Cover extends Component {
-
+	static navigationOptions = {
+		title: 'Chat with Lucy',
+	};
 	render() {
+		const { navigate } = this.props.navigation;
 		return (
 			<View style={styles.container}>
 				<View style={styles.containerTop}>
@@ -23,7 +26,7 @@ export default class Cover extends Component {
 					<TouchableOpacity style={styles.signUpButton} onPress={()=> true}>
 						<Text style={styles.signUpButtonText}>Sign up</Text>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.loginButton} title={"Log in"} onPress={()=> true}>
+					<TouchableOpacity style={styles.loginButton} title={"Log in"} onPress={() => navigate('Login')}>
 						<Text style={styles.loginButtonText}>Log in</Text>
 					</TouchableOpacity>
 				</View>

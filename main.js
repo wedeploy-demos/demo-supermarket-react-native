@@ -1,18 +1,11 @@
-import React, { Component } from 'react';
-import {
-	View,
-	Text,
-	Navigator
-} from 'react-native';
 import Cover from './pages/cover'
+import Login from './pages/login'
+import { AppRegistry } from 'react-native';
+import { StackNavigator } from 'react-navigation'
 
-export default class DemoSupermarketRN extends Component {
+const DemoSupermarketRN = StackNavigator({
+	Cover: { screen: Cover },
+	Login: { screen: Login }
+}, { headerMode: 'none' })
 
-	render() {
-		return (
-			<Navigator>
-				<Cover />
-			</Navigator>
-		);
-	}
-}
+AppRegistry.registerComponent('DemoSupermarketRN', () => DemoSupermarketRN);
