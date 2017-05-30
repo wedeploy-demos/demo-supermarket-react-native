@@ -1,0 +1,9 @@
+	{
+		"vsicons.presets.angular": false,
+		"files.associations": {
+			"*.js": "javascriptreact"
+		},
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false
+	}
