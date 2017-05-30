@@ -35,7 +35,7 @@ export default class Cover extends Component {
 	}
 }
 
-const styles = {
+const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: Colors.primary
@@ -112,4 +112,4 @@ const styles = {
 		fontWeight: 'bold',
 		color: 'white'
 	}
-}
+})
