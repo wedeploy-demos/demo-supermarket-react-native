@@ -12,6 +12,7 @@ import Colors from '../helpers/colors';
 import ColorButton from './ui-components/color_button';
 import BackButton from './ui-components/back_button';
 import HighlightButton from './ui-components/highlight_button';
+import CustomInput from './ui-components/custom_input';
 
 export default class Login extends Component {
 
@@ -22,17 +23,13 @@ export default class Login extends Component {
 					style={styles.backButton}
 					onPress={() => this.props.navigation.goBack()}/>
 				<Text style={styles.loginTitle}>Log in</Text>
-				<TextInput 
-					placeholder={"email"}
-					placeholderTextColor={Colors.textInputTextColor}
-					underlineColorAndroid={'transparent'}
+				<CustomInput
 					style={styles.editText}
-				/>
-				<TextInput
-					placeholder={"password"}
-					placeholderTextColor={Colors.textInputTextColor}
+					placeholder={"email"}/>
+				<CustomInput
 					style={styles.editText}
-				/>
+					secureTextEntry={true}
+					placeholder={"password"}/>
 				<ColorButton 
 					style={styles.loginButton} 
 					title={"Log in"} 
@@ -69,14 +66,11 @@ const styles = new StyleSheet.create({
 	},
 
 	editText: {
-		color: Colors.darkGray,
-		backgroundColor: Colors.almostBlack,
 		height: 60,
 		margin: 20,
 		marginTop: 12,
 		marginBottom: 0,
-		padding: 20,
-		borderRadius: 4,
+		borderRadius: 4
 	},
 
 	loginButton: {

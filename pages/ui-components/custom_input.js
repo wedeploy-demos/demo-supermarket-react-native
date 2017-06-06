@@ -49,7 +49,7 @@ export default class CustomInput extends Component {
 	alterSecureEntry() {
 		// Fixes bug with changing font
 		this.refs.password.blur();
-		
+
 		this.setState({
 			secureTextEntry: !this.state.secureTextEntry
 		});
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		backgroundColor: Colors.darkerGray,
 		width: 36,
-		height:36,
+		height: 36,
 		marginRight: 12,
 		borderRadius: 4
 	},
