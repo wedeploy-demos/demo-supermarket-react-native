@@ -7,7 +7,8 @@ import {
 	Image
 } from 'react-native';
 
-import Colors from '../helpers/colors'
+import Colors from '../helpers/colors';
+import ColorButton from './ui-components/color_button';
 
 export default class Cover extends Component {
 	static navigationOptions = {
@@ -18,17 +19,26 @@ export default class Cover extends Component {
 		return (
 			<View style={styles.container}>
 				<View style={styles.containerTop}>
-					<Image style={styles.icon} source={require("../resources/apple-icon.png")}/>
-					<Text style={styles.title}>Supermarket</Text>
-					<Text style={styles.description} >An ecommerce mobile demo for WeDeploy</Text>
+					<Image 
+						style={styles.icon} 
+						source={require("../resources/apple-icon.png")}/>
+					<Text style={styles.title}>
+						Supermarket
+					</Text>
+					<Text style={styles.description} >
+						An ecommerce mobile demo for WeDeploy
+					</Text>
 				</View>
 				<View style={styles.containerBottom}>
-					<TouchableOpacity style={styles.signUpButton} onPress={()=> true}>
-						<Text style={styles.signUpButtonText}>Sign up</Text>
-					</TouchableOpacity>
-					<TouchableOpacity style={styles.loginButton} title={"Log in"} onPress={() => navigate('Login')}>
-						<Text style={styles.loginButtonText}>Log in</Text>
-					</TouchableOpacity>
+					<ColorButton 
+						style={styles.signUpButton} 
+						title={"Sign up"} 
+						textColor={Colors.primary} 
+						onPress={()=> true} />
+					<ColorButton 
+						style={styles.loginButton} 
+						title={"Log in"}  
+						onPress={() => navigate('Login')} />
 				</View>
 			</View>
 		);
@@ -81,35 +91,17 @@ const styles = StyleSheet.create({
 	},
 
 	signUpButton: {
-		justifyContent: 'center',
-		alignItems: 'center',
 		height: 60,
 		backgroundColor: 'white',
 		margin: 20,
-		marginBottom: 12,
-		borderRadius: 4
+		marginBottom: 12
 	},
 
 	loginButton: {
-		justifyContent: 'center',
-		alignItems: 'center',
 		height: 60,
 		margin: 20,
 		marginTop: 0,
 		marginBottom: 31,
 		backgroundColor: Colors.almostBlack,
-		borderRadius: 4
 	},
-
-	signUpButtonText: {
-		fontSize: 16,
-		fontWeight: 'bold',
-		color: Colors.primary
-	},
-
-	loginButtonText: {
-		fontSize: 16,
-		fontWeight: 'bold',
-		color: 'white'
-	}
 })

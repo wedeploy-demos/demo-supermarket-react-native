@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
-import { Button, View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
+import { 
+	Button, 
+	View, 
+	Text, 
+	TextInput, 
+	StyleSheet, 
+	TouchableOpacity
+} from 'react-native';
+
 import Colors from '../helpers/colors';
+import ColorButton from './ui-components/color_button';
 
 export default class Login extends Component {
 
@@ -11,6 +20,7 @@ export default class Login extends Component {
 				<TextInput 
 					placeholder={"email"}
 					placeholderTextColor={Colors.textInputTextColor}
+					underlineColorAndroid={'transparent'}
 					style={styles.editText}
 				/>
 				<TextInput
@@ -18,9 +28,7 @@ export default class Login extends Component {
 					placeholderTextColor={Colors.textInputTextColor}
 					style={styles.editText}
 				/>
-				<TouchableOpacity style={styles.loginButton} title={"Log in"} onPress={() => true}>
-					<Text style={styles.loginButtonText}>Log in</Text>
-				</TouchableOpacity>
+				<ColorButton style={styles.loginButton} title={"Log in"} onPress={() => true}/>
 				<TouchableOpacity>
 					<Text style={styles.forgotPasswordButtonText}>Forgot your password?</Text>
 				</TouchableOpacity>
@@ -39,7 +47,8 @@ export default class Login extends Component {
 
 const styles = new StyleSheet.create({
 	container: {
-		flex: 1
+		flex: 1,
+		backgroundColor: 'white'
 	},
 
 	loginTitle: {
@@ -58,24 +67,14 @@ const styles = new StyleSheet.create({
 		marginTop: 12,
 		marginBottom: 0,
 		padding: 20,
-		borderRadius: 4
+		borderRadius: 4,
 	},
 
 	loginButton: {
-		justifyContent: 'center',
-		alignItems: 'center',
 		height: 60,
 		margin: 20,
 		marginTop: 12,
-		marginBottom: 31,
-		backgroundColor: Colors.primary,
-		borderRadius: 4
-	},
-
-	loginButtonText: {
-		fontSize: 16,
-		fontWeight: 'bold',
-		color: 'white'
+		marginBottom: 31
 	},
 
 	forgotPasswordButtonText: {
