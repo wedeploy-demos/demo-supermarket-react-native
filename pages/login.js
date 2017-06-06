@@ -10,12 +10,16 @@ import {
 
 import Colors from '../helpers/colors';
 import ColorButton from './ui-components/color_button';
+import BackButton from './ui-components/back_button';
 
 export default class Login extends Component {
 
 	render() {
 		return (
 			<View style={styles.container}>
+				<BackButton 
+					style={styles.backButton}
+					onPress={() => this.props.navigation.goBack()}/>
 				<Text style={styles.loginTitle}>Log in</Text>
 				<TextInput 
 					placeholder={"email"}
@@ -51,6 +55,11 @@ const styles = new StyleSheet.create({
 		backgroundColor: 'white'
 	},
 
+	backButton: {
+		marginTop: 30,
+		marginLeft: 20
+	},
+
 	loginTitle: {
 		textAlign: 'center',
 		marginTop: 100,
@@ -60,7 +69,7 @@ const styles = new StyleSheet.create({
 	},
 
 	editText: {
-		color: Colors.textInputTextColor,
+		color: Colors.darkGray,
 		backgroundColor: Colors.almostBlack,
 		height: 60,
 		margin: 20,
