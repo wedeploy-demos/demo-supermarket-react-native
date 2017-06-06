@@ -34,7 +34,7 @@ export default class Cover extends Component {
 						style={styles.signUpButton} 
 						title={"Sign up"} 
 						textColor={Colors.primary} 
-						onPress={()=> true} />
+						onPress={()=> navigate('SignUp')} />
 					<ColorButton 
 						style={styles.loginButton} 
 						title={"Log in"}  

@@ -59,13 +59,13 @@ export default class CustomInput extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flexDirection: 'row',
-		backgroundColor: Colors.almostBlack,
+		backgroundColor: Colors.darkerGray,
 		alignItems: 'center'
 	},
 
 	editText: {
 		flex: 3,
-		color: Colors.darkGray,
+		color: Colors.darkAlmostBlack,
 		borderRadius: 4,
 		padding: 20,
 	},
