@@ -11,6 +11,7 @@ import {
 import Colors from '../helpers/colors';
 import ColorButton from './ui-components/color_button';
 import BackButton from './ui-components/back_button';
+import HighlightButton from './ui-components/highlight_button';
 
 export default class Login extends Component {
 
@@ -32,17 +33,16 @@ export default class Login extends Component {
 					placeholderTextColor={Colors.textInputTextColor}
 					style={styles.editText}
 				/>
-				<ColorButton style={styles.loginButton} title={"Log in"} onPress={() => true}/>
-				<TouchableOpacity>
-					<Text style={styles.forgotPasswordButtonText}>Forgot your password?</Text>
-				</TouchableOpacity>
+				<ColorButton 
+					style={styles.loginButton} 
+					title={"Log in"} 
+					onPress={() => true}/>
+				<HighlightButton title={"Forgot your password?"}/>
 				<View style={styles.bottomView}>
 					<Text style={styles.bottomViewText}>
 						Don't you have an account?
 					</Text>
-					<TouchableOpacity>
-					<Text style={styles.forgotPasswordButtonText}>Sign up</Text>
-				</TouchableOpacity>
+					<HighlightButton title={"Sign up"}/>
 				</View>
 			</View>
 		)
