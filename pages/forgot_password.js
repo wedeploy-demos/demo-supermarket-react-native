@@ -1,20 +1,16 @@
 import React, { Component } from 'react'
 import { 
-	Button, 
 	View, 
 	Text, 
-	TextInput, 
 	StyleSheet, 
-	TouchableOpacity
 } from 'react-native';
 
 import Colors from '../helpers/colors';
 import ColorButton from './ui-components/color_button';
 import BackButton from './ui-components/back_button';
-import HighlightButton from './ui-components/highlight_button';
 import CustomInput from './ui-components/custom_input';
 
-export default class Login extends Component {
+export default class ForgotPassword extends Component {
 
 	render() {
 		return (
@@ -22,27 +18,17 @@ export default class Login extends Component {
 				<BackButton 
 					style={styles.backButton}
 					onPress={() => this.props.navigation.goBack()}/>
-				<Text style={styles.loginTitle}>Log in</Text>
+				<Text style={styles.loginTitle}>Reset password</Text>
+				<Text style={styles.description}>
+					We will send you the instructions to reset your password
+				</Text>
 				<CustomInput
 					style={styles.editText}
 					placeholder={"email"}/>
-				<CustomInput
-					style={styles.editText}
-					secureTextEntry={true}
-					placeholder={"password"}/>
 				<ColorButton 
 					style={styles.loginButton} 
-					title={"Log in"} 
+					title={"Send Reset Instructions"} 
 					onPress={() => true}/>
-				<HighlightButton 
-					title={"Forgot your password?"} 
-					onPress={()=> this.props.navigation.navigate('ForgotPassword')}/>
-				<View style={styles.bottomView}>
-					<Text style={styles.bottomViewText}>
-						Don't you have an account?
-					</Text>
-					<HighlightButton title={"Sign up"}/>
-				</View>
 			</View>
 		)
 	}
@@ -62,9 +48,16 @@ const styles = new StyleSheet.create({
 	loginTitle: {
 		textAlign: 'center',
 		marginTop: 100,
-		marginBottom: 39,
 		fontSize: 36,
 		fontWeight: '900'
+	},
+
+	description: {
+		textAlign: 'center',
+		fontSize: 20,
+		margin: 20,
+		color: Colors.darkGray,
+		fontWeight: '400'
 	},
 
 	editText: {
