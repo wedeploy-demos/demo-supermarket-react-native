@@ -6,10 +6,10 @@ import ForgotPassword from './pages/forgot_password';
 import SignUp from './pages/signup';
 
 const DemoSupermarketRN = StackNavigator({
-	Cover: { screen: Cover },
-	Login: { screen: Login },
-	ForgotPassword: { screen: ForgotPassword },
-	SignUp: { screen: SignUp }
+  Cover: { screen: Cover },
+  Login: { screen: Login },
+  ForgotPassword: { screen: ForgotPassword },
+  SignUp: { screen: SignUp }
 }, { headerMode: 'none' })
 
 AppRegistry.registerComponent('DemoSupermarketRN', () => DemoSupermarketRN);
